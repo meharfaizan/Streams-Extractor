@@ -9,7 +9,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 from config import Config
 from script import Script
-
+from pyromod import message
 
 @trojanz.on_message(filters.command(["start"]) & filters.private)
 async def start(client, message):
