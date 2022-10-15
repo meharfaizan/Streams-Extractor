@@ -1,4 +1,4 @@
-FROM python:3.1
+FROM python:3.7
 RUN mkdir /bot && chmod 777 /bot
 WORKDIR /bot
 COPY . .
