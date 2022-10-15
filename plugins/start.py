@@ -20,8 +20,13 @@ async def start(client, message):
             [
                 [
                     InlineKeyboardButton("HELP", callback_data="help_data"),
+                    InlineKeyboardButton("ABOUT", callback_data="about_data"),
+                ],
+                [
+                    InlineKeyboardButton(
+                        "⭕️ JOIN OUR CHANNEL ⭕️", url="https://t.me/TroJanzHEX")
+                ]
             ]
-          ]
         ),
         reply_to_message_id=message.message_id
     )
@@ -31,7 +36,20 @@ async def start(client, message):
 async def help(client, message):
     await message.reply_text(
         text=Script.HELP_MSG,
-        disable_web_page_preview=True
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("BACK", callback_data="start_data"),
+                    InlineKeyboardButton("ABOUT", callback_data="about_data"),
+                ],
+                [
+                    InlineKeyboardButton(
+                        "⭕️ SUPPORT ⭕️", url="https://t.me/TroJanzSupport")
+                ]
+            ]
+        ),
+        reply_to_message_id=message.message_id
     )
 
 
@@ -45,6 +63,10 @@ async def about(client, message):
                 [
                     InlineKeyboardButton("BACK", callback_data="help_data"),
                     InlineKeyboardButton("START", callback_data="start_data"),
+                ],
+                [
+                    InlineKeyboardButton(
+                        "SOURCE CODE", url="https://github.com/TroJanzHEX/Streams-Extractor")
                 ]
             ]
         ),
