@@ -8,7 +8,7 @@ import os
 class Config(object):
 
     # Get a bot token from botfather
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "5442493323:AAGE585VqW2Rjn8p7fTamBdyiSsg9dktdgE")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "5442493323:AAHGeguKxL1ZjBzbk8AtDa2hSpk-d77hcK8")
 
 
     # Get from my.telegram.org (or @UseTGXBot)
